@@ -1,0 +1,43 @@
+{
+    "phishing_database":{
+        "path": "../sconf/phish/SWEB_PHISH_1.txt",
+        "path_to_tar_github": "https://github.com/mitchellkrogza/Phishing.Database/raw/master/ALL-phishing-domains.tar.gz/"
+    },
+    "language":{
+                "default_language" : "en"
+    },
+    "image":{
+        "sweb_image_exit" : "../sconf/images/SWEB_EXIT.png",
+        "sweb_image_reload" : "../sconf/images/SWEB_RELOAD.jpg",
+        "sweb_image_home" : "../sconf/images/SWEB_HOME.png"
+    },
+    "colors_info": {
+        "menu_frame": "#e5e5e5",
+        "app_frame": "#FFFFFF",
+        "buttons_unselected": "#e5e5e5",
+        "buttons_selected": "#00ff00"
+    },
+    "audio": {
+                "sweb_en_alert_phishing": "../sconf/audio/SWEB_EN_ALERT_PHISHING.mp3"
+            },
+            "GlobalConfiguration": {
+                "numOfScreen": 0,
+                "language": "English",
+                "colorMode": "Light",
+                "soundDelay": 5,
+                "alertColor": "#AAFF00",
+                "alertSoundLanguage": "english",
+                "fontSize": 36,
+                "labelFontSize": 12,
+                "fontThickness": "bold",
+                "fontFamily": "Helvetica",
+                "macAddress": "<cool:epic:mac:address>"
+            },
+             "GUI_template": {
+                "padx_value": 5,
+                "height_divisor": 6.5,
+                "width_divisor": 5
+            }
+
+}
+

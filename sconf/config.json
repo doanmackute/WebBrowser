@@ -1,0 +1,24 @@
+{
+    "Version": {
+        "configVersion": 0.3
+    },
+    "buttons_info": {
+        "num_of_menu_buttons": 2,
+        "num_of_opt_on_frame": 4,
+        "padx_value": 5
+    },
+    "colors_info": {
+        "menu_frame": "#e5e5e5",
+        "app_frame": "#FFFFFF",
+        "buttons_unselected": "#e5e5e5",
+        "buttons_selected": "#00ff00"
+    },
+    "font_info": {
+        "font": "Helvetica 36 bold"
+    },
+    "resolution_info": {
+        "numOfScreen": 0,
+        "height_divisor": 4.5,
+        "width_divisor": 5
+    }
+}

@@ -1,0 +1,19 @@
+2023-11-27 17:00:59 : WEBBROWSER-INFORMATIONAL -> main <security> : Connection to https://google.com
+2023-11-27 17:05:05 : WEBBROWSER-NOTICE -> main <security> : Connection to Phishing server https://00000000883838383992929292222.ratingandreviews.in
+2023-11-27 17:05:18 : WEBBROWSER-NOTICE -> main <security> : Connection to Phishing server https://00000000883838383992929292222.ratingandreviews.in
+2023-11-27 17:05:27 : WEBBROWSER-NOTICE -> main <security> : Connection to Phishing server https://00000002.c1.biz
+2023-11-27 17:05:34 : WEBBROWSER-NOTICE -> main <security> : Connection to Phishing server https://defitcode.com
+2023-11-27 17:05:38 : WEBBROWSER-NOTICE -> main <security> : Connection to Phishing server https://defiuni.net
+2023-11-27 17:05:39 : WEBBROWSER-INFORMATIONAL -> main <security> : Connection to https://edition.cnn.com
+2023-11-27 17:05:47 : WEBBROWSER-NOTICE -> main <security> : Connection to Phishing server https://deftgroup.com
+2023-11-27 17:05:48 : WEBBROWSER-NOTICE -> main <security> : Connection to Phishing server https://dan.com/buy-domain/deftgroup.com?redirected=true
+2023-11-27 17:07:54 : WEBBROWSER-NOTICE -> main <security> : Connection to Phishing server https://dan.com/orders/checkout/deftgroup.com?utm_campaign=BuyNow&utm_category=BIN-LTO-BRANDABLE&utm_medium=cta&utm_source=dan.com&cookie_settings=%7B%22performance%22%3Atrue%2C%22advertising%22%3Atrue%2C%22support%22%3Atrue%7D&cookie_permission=2024-11-27%2B17%3A05%3A52%2B%2B0100
+2023-11-27 17:08:10 : WEBBROWSER-NOTICE -> main <security> : Connection to Phishing server https://dan.com/buy-domain/deftgroup.com?redirected=true
+2023-11-27 17:21:48 : WEBBROWSER-NOTICE -> main <security> : Connection to Phishing server https://dan.com/orders/checkout/deftgroup.com?utm_campaign=BuyNow&utm_category=BIN-LTO-BRANDABLE&utm_medium=cta&utm_source=dan.com&cookie_settings=%7B%22performance%22%3Atrue%2C%22advertising%22%3Atrue%2C%22support%22%3Atrue%7D&cookie_permission=2024-11-27%2B17%3A05%3A52%2B%2B0100
+2023-11-27 17:22:03 : WEBBROWSER-NOTICE -> main <security> : Connection to Phishing server https://dan.com/buy-domain/deftgroup.com?redirected=true
+2023-11-28 21:04:19 : WEBBROWSER-INFORMATIONAL -> main <security> : Connection to https://edition.cnn.com/2023/11/28/health/the-severe-psychological-impacts-released-hostages-detainees-may-face/index.html
+2023-11-28 21:04:27 : WEBBROWSER-INFORMATIONAL -> main <security> : Connection to https://youtube.com
+2023-11-28 21:04:38 : WEBBROWSER-INFORMATIONAL -> main <security> : Connection to https://www.youtube.com/results?search_query=vutbr.cz
+2023-11-28 21:04:45 : WEBBROWSER-INFORMATIONAL -> main <security> : Connection to https://www.youtube.com/results?search_query=vut
+2023-11-28 21:04:52 : WEBBROWSER-INFORMATIONAL -> main <security> : Connection to https://www.youtube.com/watch?v=g7b1Y05STiU
+2023-11-28 21:05:09 : WEBBROWSER-INFORMATIONAL -> main <security> : Connection to https://vutbr.cz
