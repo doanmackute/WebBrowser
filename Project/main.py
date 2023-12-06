@@ -168,10 +168,6 @@ class MyBrowser(QMainWindow):
         self.url_bar.returnPressed.connect(self.navigate_to_url)
         self.url_toolbar.addWidget(self.url_bar)
         
-        # Configure audio and for hovering buttons, menus and options
-        # Run this methods for the set Current language in Translator
-        #self.update_ui_text()
-        #self.update_ui_audio()
         self.browser.urlChanged.connect(self.security_again_phishing)
         self.browser.loadFinished.connect(self.onLoadFinished)
     
@@ -426,8 +422,8 @@ class MyBrowser(QMainWindow):
         # If in URl not http or https, connect with HTTPS
         if "://" not in url_in_bar:
             url_in_bar = "https://" + url_in_bar
-        if url_in_bar.endswith("/"):
-            url_in_bar = url_in_bar[:-1]
+        #if url_in_bar.endswith("/"):
+            #url_in_bar = url_in_bar[:-1]
         
         # Set default style for toolbar
         self.menu_1_toolbar.setStyleSheet(self.default_style_toolbar())
@@ -437,40 +433,48 @@ class MyBrowser(QMainWindow):
     def security_again_phishing(self,qurl):
         # Get url from QURL
         url_in_browser = qurl.toString()
-        if not url_in_browser.endswith('/'):
-            #url_in_browser = url_in_browser[:-1]
-            if "about:blank" in url_in_browser:
-                return
-            elif "google.com" not in url_in_browser:
-                # Check that if URL is from URL
-                if self.url_blocker.is_url_blocked(url_in_browser):
-                    self.show_blocked_message(url_in_browser)
-                    # Log with level 5 when connected to phishing
-                    self.logger.log_blocked_url('WEBBROWSER', 5, 'main <security>', f'Connection to Phishing server {url_in_browser}')
+        if url_in_browser.endswith('/'):
+            if self.url_blocker.is_url_blocked(url_in_browser):
+                self.show_blocked_message(url_in_browser)
+                 # Log with level 5 when connected to phishing
+                self.logger.log_blocked_url('WEBBROWSER', 5, 'main <security>', f'Connection to Phishing server {url_in_browser}')
                     
-                    # Set red colour for connect to phishing
-                    self.menu_1_toolbar.setStyleSheet(self.phishing_style_toolbar())
-                    # Connect to URL after entering
-                    self.browser.setUrl(QUrl(url_in_browser))
-                else:
-                    self.menu_1_toolbar.setStyleSheet(self.default_style_toolbar())
-                    # Log with level 6 INFORMATIONAL
-                    self.logger.log_blocked_url('WEBBROWSER', 6, 'main <security>', f'Connection to {url_in_browser}')
-                    # Connect to URL after entering
-                    self.browser.setUrl(QUrl(url_in_browser))
+                # Set red colour for connect to phishing
+                self.menu_1_toolbar.setStyleSheet(self.phishing_style_toolbar())
+                # Connect to URL after entering
+                self.browser.setUrl(QUrl(url_in_browser))
             else:
                 self.menu_1_toolbar.setStyleSheet(self.default_style_toolbar())
                 # Log with LEVEL 6 INFORMATIONAL
                 self.logger.log_blocked_url('WEBBROWSER', 6, 'main <security>', f'Connection to {url_in_browser}')
                 # Connect to URL after entering
                 self.browser.setUrl(QUrl(url_in_browser))
-        else:
-            self.url_bar.setText(url_in_browser)
-            self.url_bar.setCursorPosition(0)
-            return
+        elif not url_in_browser.endswith('/'):
+            if "about:blank" in url_in_browser:
+                return
+            elif "google.com" in url_in_browser:
+                    self.menu_1_toolbar.setStyleSheet(self.default_style_toolbar())
+                    # Log with level 6 INFORMATIONAL
+                    self.logger.log_blocked_url('WEBBROWSER', 6, 'main <security>', f'Connection to {url_in_browser}')
+                    # Connect to URL after entering
+                    self.browser.setUrl(QUrl(url_in_browser))
+            elif self.url_blocker.is_url_blocked(url_in_browser):
+                self.show_blocked_message(url_in_browser)
+                # Log with level 5 when connected to phishing
+                self.logger.log_blocked_url('WEBBROWSER', 5, 'main <security>', f'Connection to Phishing server {url_in_browser}')
+                    
+                # Set red colour for connect to phishing
+                self.menu_1_toolbar.setStyleSheet(self.phishing_style_toolbar())
+                # Connect to URL after entering
+                self.browser.setUrl(QUrl(url_in_browser))
+            #else:
+                #self.menu_1_toolbar.setStyleSheet(self.default_style_toolbar())
+                # Log with LEVEL 6 INFORMATIONAL
+                #self.logger.log_blocked_url('WEBBROWSER', 6, 'main <security>', f'Connection to {url_in_browser}')
+                # Connect to URL after entering
+                #self.browser.setUrl(QUrl(url_in_browser))
         self.url_bar.setText(url_in_browser)
-        self.url_bar.setCursorPosition(0)
-        
+   
     # Show block message when User connect to web from Phishing list
     def show_blocked_message(self, url):
         #msg = QMessageBox()
